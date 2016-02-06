@@ -70,7 +70,6 @@ project(":webapp") {
         providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     }
 
-
     distributions {
         main{
             contents {
