@@ -1,0 +1,1 @@
+java -jar lib/webapp-1.0.war

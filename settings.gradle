@@ -1,0 +1,4 @@
+include ':persistence'
+include ':webapp'
+include ':distribution'
+//include ':app'
