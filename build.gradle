@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
-        //mavenLocal()
+        mavenLocal()
         maven { url "http://repo.spring.io/release" }
         maven { url "http://repo.spring.io/milestone" }
         maven { url "http://repo.spring.io/snapshot" }
@@ -53,21 +53,24 @@ project(":persistence") {
 
 
 project(":webapp") {
-    apply plugin: "spring-boot"
-    apply plugin: "distribution"
     apply plugin: "java"
     apply plugin: "war"
+    apply plugin: "spring-boot"
+    apply plugin: "distribution"
 
     dependencies {
-
+        testCompile group: 'junit', name: 'junit', version: '4.11'
         compile project(":persistence")
-
-        compile "org.springframework.boot:spring-boot-starter-web:$project.ext.springBootVersion"
+        compile('javax.servlet:javax.servlet-api')
+        compile("org.springframework.boot:spring-boot-starter-web:$project.ext.springBootVersion") {
+            exclude module: "spring-boot-starter-tomcat"
+        }
         //for live reload
-        compile("org.springframework.boot:spring-boot-devtools:$project.ext.springBootVersion")
+        //compile("org.springframework.boot:spring-boot-devtools:$project.ext.springBootVersion")
+        compile("org.springframework.boot:spring-boot-starter-jetty:$springBootVersion")
         //uncomment in case you need to monitor performance
         //compile("org.springframework.boot:spring-boot-starter-actuator:$project.ext.springBootVersion")
-        providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+        //providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     }
 
     distributions {
