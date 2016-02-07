@@ -1,4 +1,9 @@
-include ':persistence'
+
+
+//include ':persistence'
+//include ':service'
+include ':rest-facade'
 include ':webapp'
-include ':distribution'
+//include ':distribution'
+//include ':integration-test-facade'
 //include ':app'

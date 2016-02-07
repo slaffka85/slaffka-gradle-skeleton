@@ -1,6 +1,6 @@
 insert into message(id, header, body) values (0, 'Header1', 'Hello!');
 insert into message(id, header, body) values (1, 'Header2', 'Good bye!');
-insert into message(id, header, body) values (2, 'Header3', 'This is test');
+insert into message(id, header, body) values (2, 'Header3', 'This is entity');
 insert into message(id, header, body) values (3, 'Header4', 'Hmm?');
 insert into message(id, header, body) values (4, 'Header5', 'Trolololo.');
 insert into message(id, header, body) values (5, 'Header6', 'Witam.');

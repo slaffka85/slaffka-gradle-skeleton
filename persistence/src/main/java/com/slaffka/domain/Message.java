@@ -1,4 +1,4 @@
-package com.lanit.domain;
+package com.slaffka.domain;
 
 /*import javax.persistence.Column;
 import javax.persistence.Entity;

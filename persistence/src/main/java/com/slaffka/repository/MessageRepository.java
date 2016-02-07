@@ -1,4 +1,4 @@
-package com.lanit.repository;
+package com.slaffka.repository;
 
 /*import Message;
 import org.springframework.data.repository.PagingAndSortingRepository;*/
