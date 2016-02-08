@@ -1,7 +1,7 @@
 
 
-//include ':persistence'
-//include ':service'
+include ':persistence'
+include ':service'
 include ':rest-facade'
 include ':webapp'
 //include ':distribution'

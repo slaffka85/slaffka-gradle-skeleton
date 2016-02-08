@@ -31,7 +31,7 @@ public class JmsTestController {
         };
         System.out.println("Sending a new message.");
 
-        jmsTemplate.send("callQueue", messageCreator);
+        jmsTemplate.send("queue/emailQueue", messageCreator);
         jmsTemplate.send("callTopic", messageCreator);
         return "Hello world from Spring Boot";
     }
