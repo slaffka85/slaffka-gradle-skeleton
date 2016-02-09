@@ -15,9 +15,11 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.ConnectionFactory;
 //import org.springframework.context.annotation.Import;
@@ -28,7 +30,9 @@ import org.springframework.jms.annotation.EnableJms;*/
 
 @ComponentScan("com.slaffka")
 @EnableJms
+@EnableScheduling
 @EnableAutoConfiguration
+@PropertySource({"classpath:${region:default}.properties" })
 public class ApplicationConfig extends SpringBootServletInitializer {
 
     // Strictly speaking this bean is not necessary as boot creates a default

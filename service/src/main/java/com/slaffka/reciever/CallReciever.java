@@ -1,8 +1,8 @@
 package com.slaffka.reciever;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.slaffka.domain.Notify;
-import com.slaffka.repository.NotifyRepository;
+/*import com.slaffka.domain.Notify;
+import com.slaffka.repository.NotifyRepository;*/
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ public class CallReciever {
 
     private static Logger logger = LoggerFactory.getLogger(CallReciever.class);
 
-    @Autowired
-    private NotifyRepository notifyRepository;
+/*    @Autowired
+    private NotifyRepository notifyRepository;*/
 
     /**
      * When you receive a message, print it out, then shut down the application.
@@ -28,12 +28,12 @@ public class CallReciever {
      */
     @JmsListener(destination = "outgoingCallQueue", containerFactory = "queueJmsContainerFactory")
     public void receiveMessage(String message) throws IOException {
-        logger.debug("outgoingCallQueue, message = " + message);
+        logger.info("outgoingCallQueue, message = " + message);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Notify notify = objectMapper.readValue(message, Notify.class);
+ /*       Notify notify = objectMapper.readValue(message, Notify.class);
 
-        notifyRepository.save(notify);
+        notifyRepository.save(notify);*/
     }
 
 

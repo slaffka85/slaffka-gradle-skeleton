@@ -1,6 +1,6 @@
 package com.slaffka.controller;
 
-import com.slaffka.SpringFun;
+import com.slaffka.ApplicationConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
  * Created by slaffka85 on 07.02.2016.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SpringFun.class)
+@SpringApplicationConfiguration(classes = ApplicationConfig.class)
 public class HelloControllerIntegrationTest {
 
     @Autowired

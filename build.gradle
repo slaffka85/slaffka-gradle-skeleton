@@ -155,8 +155,9 @@ project(":webapp") {
         dependsOn bootRepackage
     }
 }
+/*
 
-/*project(":integration-test-facade") {
+project(":integration-test-facade") {
     dependencies {
         //compile "org.springframework.boot:spring-boot-starter-data-jpa"
         compile("org.springframework.boot:spring-boot-starter-web") {
@@ -171,7 +172,8 @@ project(":webapp") {
         testCompile "org.springframework.boot:spring-boot-starter-test"
         testCompile project(":webapp")
     }
-}*/
+}
+*/
 
 
 
